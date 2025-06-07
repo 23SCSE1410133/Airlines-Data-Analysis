@@ -5,20 +5,6 @@ This project presents a detailed analysis and interactive visualization of airli
 
 ---
 
-## 📚 Table of Contents
-
-- [Overview](#overview)
-- [Dataset Description](#dataset-description)
-- [Project Objectives](#project-objectives)
-- [Data Preparation & Cleaning](#data-preparation--cleaning)
-- [Feature Engineering](#feature-engineering)
-- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-- [Interactive Visualizations](#interactive-visualizations)
-- [Insights and Observations](#insights-and-observations)
-- [Evaluation Rubric Coverage](#evaluation-rubric-coverage)
-- [Technologies Used](#technologies-used)
----
-
 ## 🔍 Overview
 
 The aviation industry generates massive data from daily operations. This project utilizes such data to explore:
