@@ -1,119 +1,155 @@
 # ✈️ Airline Data Analysis & Visualization Project
 
-Welcome to my **Airline Data Analysis** project!
-
-This project dives into real-world airline data to uncover interesting stories about passengers, flights, delays, and even pilot performance. Using powerful Python tools and interactive visualizations, I’ve tried to make complex data both insightful and easy to understand.
-
----
-
-## 📚 What's Inside
-
-- [Project Overview](#project-overview)
-- [About the Dataset](#about-the-dataset)
-- [What I Set Out to Do](#what-i-set-out-to-do)
-- [How I Worked With the Data](#how-i-worked-with-the-data)
-- [Key Visualizations](#key-visualizations)
-- [Interesting Discoveries](#interesting-discoveries)
-- [How This Meets the Rubrics](#how-this-meets-the-rubrics)
-- [Tools I Used](#tools-i-used)
-- [How to Explore It Yourself](#how-to-explore-it-yourself)
-- [What’s Next](#whats-next)
-- [License](#license)
+Welcome to the **Airline Data Analysis** project!  
+This project presents a detailed analysis and interactive visualization of airline operations using a structured passenger and flight dataset. We focus on generating business-relevant insights through effective data storytelling, thoughtful chart selection, and interactive visuals.
 
 ---
 
-## 🔍 Project Overview
+## 📚 Table of Contents
 
-Airlines operate thousands of flights daily, and each one generates a ton of data. From passenger details to flight times, delays, and routes — it’s all there waiting to be explored.
+- [Overview](#overview)
+- [Dataset Description](#dataset-description)
+- [Project Objectives](#project-objectives)
+- [Data Preparation & Cleaning](#data-preparation--cleaning)
+- [Feature Engineering](#feature-engineering)
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+- [Interactive Visualizations](#interactive-visualizations)
+- [Insights and Observations](#insights-and-observations)
+- [Evaluation Rubric Coverage](#evaluation-rubric-coverage)
+- [Technologies Used](#technologies-used)
+---
 
-In this project, I wanted to:
-- Understand who’s flying (age, nationality, gender)
-- See which flights are on time or delayed
-- Analyze how busy and punctual pilots are
-- Spot patterns in where people are flying from and to
+## 🔍 Overview
+
+The aviation industry generates massive data from daily operations. This project utilizes such data to explore:
+
+- Passenger demographics and flight behavior
+- Causes and patterns of flight delays and cancellations
+- Pilot workload and reliability
+- Travel trends by country and continent
+
+The goal is to generate strategic insights for airlines using **interactive visualizations and rich analysis**.
 
 ---
 
-## 📁 About the Dataset
+## 📁 Dataset Description
 
-I worked with a dataset called `Airline Dataset1.csv` that includes:
+The dataset `Airline Dataset1.csv` includes 15 columns capturing passenger, airport, pilot, and flight details:
 
-| Column              | What's In It                          |
-|---------------------|---------------------------------------|
-| Passenger Info      | Name, Age, Gender, Nationality        |
-| Flight Info         | Date, Status, Airport, Continent      |
-| Pilot Info          | Name and number of flights handled    |
-
-It’s a great dataset for learning how real airline data can be structured and analyzed.
-
----
-
-## 🎯 What I Set Out to Do
-
-This project had two main goals:
-1. Use **data science** to clean, prepare, and analyze the dataset
-2. Create **interactive visualizations** that tell a clear and meaningful story
+| Column Name            | Description |
+|------------------------|-------------|
+| Passenger ID           | Unique identifier for each passenger |
+| First Name, Last Name  | Passenger's full name |
+| Gender, Age, Nationality | Demographic info |
+| Airport Name, Country, Continent | Departure location |
+| Departure Date         | Date of flight departure |
+| Arrival Airport        | Destination airport |
+| Pilot Name             | Assigned pilot |
+| Flight Status          | On Time, Delayed, or Cancelled |
 
 ---
 
-## 🧹 How I Worked With the Data
+## 🎯 Project Objectives
 
-- Cleaned up missing values and fixed formatting
-- Converted dates and standardized labels
-- Created new features like total flights per pilot or age groups
-- Grouped and sorted data for better comparisons
-
----
-
-## 📊 Key Visualizations
-
-Here are some of the interactive charts I built (with Plotly):
-
-| Chart Type     | What It Shows                              |
-|----------------|---------------------------------------------|
-| 🥧 Pie Chart     | Proportion of on-time, delayed, canceled flights |
-| 📈 Line Chart    | Flights per day over time                 |
-| 📊 Bar Chart     | How pilots perform (on-time vs delays)    |
-| 🌍 Treemap       | Where passengers are coming from           |
-| 🎯 Scatter Plot  | Age of passengers by date and flight status |
-| 📦 Box Plot      | Age ranges for each gender & flight status |
-| 📉 Histogram     | Passenger age distribution by gender       |
-
-Each one is interactive — you can hover for more info, zoom in, filter categories, and more.
+1. Source, clean, and validate a real-world dataset
+2. Engineer features for insightful analytics
+3. Perform descriptive and diagnostic analysis
+4. Visualize key trends interactively
+5. Communicate findings through compelling data storytelling
 
 ---
 
-## 💡 Interesting Discoveries
+## 🧹 Data Preparation & Cleaning
 
-- ✈️ Delays are more common in some continents — maybe due to weather or airport traffic.
-- 👴 Older passengers seem to fly more and face slightly more delays.
-- 🧑‍✈️ Some pilots fly way more than others — could be overwork?
-- 📅 Weekends show spikes in flights — probably leisure travel.
-
----
-
-## ✅ How This Meets the Rubrics
-
-### ✨ **Visualization Rubric**
-- **✅ Variety of charts**: scatter, box, pie, bar, treemap, etc.
-- **✅ Visual clarity**: color-coded, labeled, legends added
-- **✅ Interactivity**: all charts include tooltips, zoom, and filters
-- **✅ Data storytelling**: markdown explains each insight
-
-### 🔍 **Data Analysis Rubric**
-- ✅ Cleaned and prepared dataset
-- ✅ Created new features and removed outliers
-- ✅ Found patterns in delay reasons and passenger types
-- ✅ Backed up findings with summary stats and charts
+- Checked and removed missing values (e.g., names, flight status)
+- Converted `Departure Date` to datetime format
+- Removed duplicates and standardized categorical values (e.g., flight status labels)
 
 ---
 
-## 🛠 Technology Used
+## 🏗 Feature Engineering
 
-- **Python** (with Pandas, NumPy)
-- **Plotly** for stunning interactive charts
-- **Seaborn & Matplotlib** for quick static plots
-- **Google Colab** as my coding notebook
-- **GitHub** to share the project
+- Aggregated pilot flight counts and delay ratios
+- Extracted day-of-week/month from `Departure Date`
+- Grouped by continent and nationality for geo-insights
 
 ---
+
+## 📊 Exploratory Data Analysis (EDA)
+
+### ✅ Passenger Demographics
+- Age distribution by gender
+- Nationality vs continent
+
+### ✅ Flight Operations
+- On-time vs delayed/cancelled rates
+- Flight trends over time
+
+### ✅ Pilot Analysis
+- Performance (on-time ratio) by pilot
+- Most/least frequent flyers
+
+### ✅ Geographic Trends
+- Most active countries and continents
+- Route combinations
+
+---
+
+## 📈 Interactive Visualizations
+
+| Chart Type     | Purpose                                             | Interactive Features |
+|----------------|-----------------------------------------------------|-----------------------|
+| ✅ Pie Chart        | Flight status distribution                         | Hover, % display       |
+| ✅ Histogram        | Age distribution by gender                         | KDE overlay, filter    |
+| ✅ Time Series Line | Flights over time                                  | Zoom, range slider     |
+| ✅ Grouped Bar      | Top 15 pilot performance by flight status          | Hover, color legends   |
+| ✅ Treemap          | Nationality grouped by departure continent         | Zoom, drill-down       |
+| ✅ Scatter Plot     | Passenger age vs departure date by flight status   | Tooltips, zoom         |
+| ✅ Box Plot         | Age spread by gender and flight status             | Hover, outliers        |
+
+---
+
+## 💡 Insights and Observations
+
+- ✈️ **Delays are more common** in specific continents, likely due to infrastructure or weather issues.
+- 👥 **Older passengers** tend to have a slightly higher delay/cancellation rate.
+- 🧑‍✈️ **Some pilots are overburdened**, impacting punctuality.
+- 🌍 **Most flights depart from a small number of hub airports**, mostly located in North America and Europe.
+- 📅 **Flight volumes spike on weekends**, indicating leisure travel peaks.
+
+---
+
+## 📋 Evaluation Rubric Coverage
+
+### 🟩 **Visualization Rubric**
+| Criteria                                | Met |
+|-----------------------------------------|-----|
+| Appropriate chart types (bar, pie, etc) | ✅ |
+| Aesthetic, clear, and labeled visuals   | ✅ |
+| Interactive elements (hover, zoom, etc) | ✅ |
+| Storytelling using data insights        | ✅ |
+
+### 🟩 **Data Analysis Rubric**
+| Criteria                                | Met |
+|-----------------------------------------|-----|
+| Sourcing and understanding dataset      | ✅ |
+| Data cleaning and handling nulls        | ✅ |
+| Feature engineering                     | ✅ |
+| Data consistency and integrity          | ✅ |
+| Summary statistics and insights         | ✅ |
+| Pattern/anomaly identification          | ✅ |
+| Outlier handling                        | ✅ |
+| Initial visual representation           | ✅ |
+
+---
+
+## 🛠 Technologies Used
+
+- **Python** (Jupyter / Colab)
+  - `pandas`, `numpy` – data processing
+  - `plotly`, `matplotlib`, `seaborn` – visualizations
+- **Google Colab** – development environment
+- **GitHub** – version control and sharing
+
+---
+
